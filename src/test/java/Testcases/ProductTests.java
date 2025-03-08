@@ -64,6 +64,7 @@ public class ProductTests extends BaseClass {
                 .when()
                 .delete(Routes.Delete_Product)
                 .then()
+                
                 .statusCode(200);
     }
 }
