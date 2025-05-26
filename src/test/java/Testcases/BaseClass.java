@@ -6,10 +6,13 @@ import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BaseClass {
     ConfigReader configReader;
@@ -25,8 +28,8 @@ public class BaseClass {
         PrintStream log=new PrintStream(fos,true);
         requestLoggingFilter=new RequestLoggingFilter(log);
         responseLoggingFilter=new ResponseLoggingFilter(log);
-
         RestAssured.filters(requestLoggingFilter,responseLoggingFilter);
 
     }
+
 }

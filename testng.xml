@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="FakeRest API Tests" verbose="2" preserve-order="true">
+        <classes>
+            <class name="Testcases.ProductTests">
+                <methods>
+                    <include name="testGetAllProducts"/>
+                    <include name="testCreateNewProduct"/>
+                    <include name="testUpdateProduct"/>
+                    <include name="testDeleteProduct"/>
+                </methods>
+            </class>
+            <class name="Testcases.UserTests">
+                <methods>
+                    <include name="testGetAllUsers"/>
+                    <include name="testSingleUser"/>
+                    <include name="testCreateUser"/>
+                    <include name="testUpdateUser"/>
+                    <include name="testDeleteUser"/>
+                </methods>
+            </class>
+            <class name="Testcases.CartTests">
+                <methods>
+                    <include name="testGetAllCarts"/>
+                    <include name="testCreateCart"/>
+                    <include name="testSingleCart"/>
+                    <include name="testUpdateCart"/>
+                    <include name="testDeleteCart"/>
+                </methods>
+            </class>
+            <class name="Testcases.LoginTests">
+                <methods>
+                    <include name="testInvalidLogin"/>
+                    <include name="testSuccessFullLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
